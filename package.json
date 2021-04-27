@@ -1,0 +1,28 @@
+{
+  "name": "off-contracts",
+  "version": "1.0.2",
+  "description": "Contracts for Off",
+  "main": "truffle.js",
+  "scripts": {
+    "test": "scripts/test.sh",
+    "migrate": "./node_modules/.bin/truffle migrate",
+    "compile": "./node_modules/.bin/truffle compile",
+    "ganache": "ganache-cli -d -i 5777 --gasLimit 0xfffffffffff -m \"enable depend figure right kit daughter job giraffe news window tonight more\""
+  },
+  "author": "ana0",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.0",
+    "@truffle/hdwallet-provider": "^1.2.6",
+    "dotenv": "^8.2.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.2.6"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "chai-bn": "^0.2.1",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
