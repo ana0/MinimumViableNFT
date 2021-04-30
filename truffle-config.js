@@ -11,7 +11,7 @@ module.exports = {
     matic: {
       provider: () => new HDWalletProvider(
         process.env.MNEMONIC,
-        `https://rpc-mainnet.maticvigil.com`
+        `https://rpc-mainnet.matic.network`
       ),
       network_id: 137,
       confirmations: 2,
