@@ -1,12 +1,12 @@
 {
-  "name": "off-contracts",
-  "version": "1.0.2",
-  "description": "Contracts for Off",
+  "name": "minimum-viable-NFT-contracts",
+  "version": "1.0.0",
+  "description": "Contracts for a minimum viable NFT compatible with Opensea Matic",
   "main": "truffle.js",
   "scripts": {
     "test": "scripts/test.sh",
     "migrate": "./node_modules/.bin/truffle migrate",
-    "compile": "./node_modules/.bin/truffle compile",
+    "compile": "./node_modules/.bin/truffle compile --all",
     "ganache": "ganache-cli -d -i 5777 --gasLimit 0xfffffffffff -m \"enable depend figure right kit daughter job giraffe news window tonight more\""
   },
   "author": "ana0",
@@ -16,7 +16,7 @@
     "@truffle/hdwallet-provider": "^1.2.6",
     "dotenv": "^8.2.0",
     "ganache-cli": "^6.12.2",
-    "truffle": "^5.2.6"
+    "truffle": "5.1.65"
   },
   "devDependencies": {
     "chai": "^4.3.0",
