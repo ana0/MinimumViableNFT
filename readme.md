@@ -26,3 +26,5 @@
 
 13. go to opensea and create an account, this will ask you to sign a message with metamask. you should see your NFT in your wallet
 
+14. if you want to mint further NFTs, transfer these NFTs to other people, there's an example script in `transfer.js`. You can run it from a terminal open in this repo with `node transfer.js`
+
