@@ -14,10 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^3.4.0",
-    "@truffle/hdwallet-provider": "^1.2.6",
+    "@truffle/hdwallet-provider": "^1.5.0",
     "dotenv": "^8.2.0",
     "ganache-cli": "^6.12.2",
-    "truffle": "5.1.65"
+    "truffle": "5.4.7"
   },
   "devDependencies": {
     "chai": "^4.3.0",

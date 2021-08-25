@@ -18,13 +18,15 @@
 
 9. again using your text editor, edit the file metadata.json to include the link to your image. You can also change the name and description to be anything you want
 
-10. upload the metadata to pinata, again being sure to check the box to "preserve filename", and get the CID
+10. again using your text editor, edit the file contract-metadata.json to include the link to your image, name and description you want. `seller_fee_basis_points` is the percentage you will receive if the work is resold, and `fee_recipient` is the address that will receive it.Do not set the `seller_fee_basis_points` higher than 3000 (30%), as this is not supported by Opensea
 
-11. using your text editor, change the CID in the file migrations/02_deploy_main_contract.js
+11. upload the metadata and contract-metadata files to pinata, again being sure to check the box to "preserve filename", and get the CID
 
-12. from your terminal open in the MinimumViableNFT folder, run: `npm run deploy`
+12. using your text editor, change the CID in the file migrations/02_deploy_main_contract.js
 
-13. go to opensea and create an account, this will ask you to sign a message with metamask. you should see your NFT in your wallet
+13. from your terminal open in the MinimumViableNFT folder, run: `npm run deploy`
 
-14. if you want to mint further NFTs, transfer these NFTs to other people, there's an example script in `transfer.js`. You can run it from a terminal open in this repo with `node transfer.js`
+14. go to opensea and create an account, this will ask you to sign a message with metamask. you should see your NFT in your wallet
+
+15. if you want to mint further NFTs, transfer these NFTs to other people, there's an example script in `transfer.js`. You can run it from a terminal open in this repo with `node transfer.js`
 

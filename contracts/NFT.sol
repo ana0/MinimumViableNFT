@@ -7,6 +7,7 @@ import "./NativeMetaTransaction.sol";
 import "./ContextMixin.sol";
 
 contract NFT is Ownable, ERC721, ContextMixin, NativeMetaTransaction {
+    string public contractURI;
 
     constructor (string memory name_, string memory symbol_) Ownable() ERC721(name_, symbol_) {
         _initializeEIP712(name_);
@@ -14,6 +15,10 @@ contract NFT is Ownable, ERC721, ContextMixin, NativeMetaTransaction {
 
     function setBaseURI(string memory baseURI_) public onlyOwner {
         _setBaseURI(baseURI_);
+    }
+
+    function setContractURI(string memory contractURI_) public onlyOwner {
+        contractURI = contractURI_;
     }
 
     function mint(uint256 tokenId, string memory tokenURI) public onlyOwner {

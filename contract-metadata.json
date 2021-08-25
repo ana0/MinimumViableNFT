@@ -1,0 +1,8 @@
+{
+  "name": "Mutek Critical NFT Studies Proof of Attendance",
+  "description": "A badge of attendance given to attendees from the Aug 26 workshop.",
+  "image": "https://gateway.pinata.cloud/ipfs/QmZqq138TPREzcp99SzrKBmn2gkVHCYh9DmWUv6gr6ZN7K/gray-area-poa-01.jpg",
+  "external_link": "https://example.io",
+  "seller_fee_basis_points": 3000, 
+  "fee_recipient": "0xb6a074dB9c5492bF2f54c8316EB12805Fd0D30D9"
+}
