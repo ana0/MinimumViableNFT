@@ -1,29 +1,47 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./NativeMetaTransaction.sol";
 import "./ContextMixin.sol";
 
-contract NFT is Ownable, ERC721, ContextMixin, NativeMetaTransaction {
+contract NFT is Ownable, ERC721, ERC721URIStorage, ContextMixin, NativeMetaTransaction {
     string public contractURI;
+    string public storedBaseURI;
 
     constructor (string memory name_, string memory symbol_) Ownable() ERC721(name_, symbol_) {
         _initializeEIP712(name_);
     }
 
     function setBaseURI(string memory baseURI_) public onlyOwner {
-        _setBaseURI(baseURI_);
+        storedBaseURI = baseURI_;
+    }
+
+    function _baseURI() internal view virtual override returns (string memory) {
+        return storedBaseURI;
+    }
+
+    function baseURI() public view returns (string memory) {
+        return _baseURI();
     }
 
     function setContractURI(string memory contractURI_) public onlyOwner {
         contractURI = contractURI_;
     }
 
-    function mint(uint256 tokenId, string memory tokenURI) public onlyOwner {
+    function mint(uint256 tokenId, string memory tokenURI_) public onlyOwner {
         _safeMint(owner(), tokenId);
-        _setTokenURI(tokenId, tokenURI);
+        _setTokenURI(tokenId, tokenURI_);
+    }
+
+    function _burn(uint256 tokenId) internal virtual override(ERC721, ERC721URIStorage) {
+        return ERC721URIStorage._burn(tokenId);
+    }
+
+    function tokenURI(uint256 tokenId) public view virtual override(ERC721, ERC721URIStorage) returns (string memory) {
+        return ERC721URIStorage.tokenURI(tokenId);
     }
 
     /**
@@ -33,7 +51,8 @@ contract NFT is Ownable, ERC721, ContextMixin, NativeMetaTransaction {
         internal
         override
         view
-        returns (address payable sender)
+        virtual
+        returns (address sender)
     {
         return ContextMixin.msgSender();
     }

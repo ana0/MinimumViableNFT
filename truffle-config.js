@@ -11,7 +11,7 @@ module.exports = {
     matic: {
       provider: () => new HDWalletProvider(
         process.env.MNEMONIC,
-        `https://matic-mainnet.chainstacklabs.com`
+        `https://polygon-mainnet.infura.io/v3/0a9d453d25754d52973ee1a69ea37937`
       ),
       network_id: 137,
       confirmations: 2,
@@ -28,7 +28,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: ">=0.6.0 <0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: ">=0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {

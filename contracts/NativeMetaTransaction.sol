@@ -1,7 +1,8 @@
 //SPDX-License-Identifier: Unlicense
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "./EIP712Base.sol";
 
 /**
@@ -54,7 +55,7 @@ contract NativeMetaTransaction is EIP712Base {
 
         emit MetaTransactionExecuted(
             userAddress,
-            msg.sender,
+            payable(msg.sender),
             functionSignature
         );
 

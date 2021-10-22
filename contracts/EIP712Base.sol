@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: Unlicense
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity >=0.8.0;
 
 /**
  * https://github.com/maticnetwork/pos-portal/blob/master/contracts/common/Initializable.sol
@@ -62,7 +62,7 @@ contract EIP712Base is Initializable {
         return domainSeperator;
     }
 
-    function getChainId() public pure returns (uint256) {
+    function getChainId() public view returns (uint256) {
         uint256 id;
         assembly {
             id := chainid()
