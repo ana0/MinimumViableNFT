@@ -24,7 +24,7 @@
 
 12. using your text editor, change the CID in the file migrations/02_deploy_main_contract.js
 
-13. from your terminal open in the MinimumViableNFT folder, run: `node deploy.js`
+13. from your terminal open in the MinimumViableNFT folder, run: `node deploy.js`. This will print an ethereum address to console - save it! It's the address your NFT was deployed at.
 
 14. go to opensea and create an account, this will ask you to sign a message with metamask. you should see your NFT in your wallet
 

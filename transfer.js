@@ -38,6 +38,9 @@ const test = async () => {
     2, // the token id of the NFT you are transferring
     {from: accounts[0]}
   );
+
+  console.log('done');
+  process.exit();
 }
 
 test();
