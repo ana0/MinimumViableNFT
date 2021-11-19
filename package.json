@@ -1,7 +1,7 @@
 {
-  "name": "minimum-viable-NFT-contracts",
+  "name": "minimum-viable-nft",
   "version": "1.0.0",
-  "description": "Contracts for a minimum viable NFT compatible with Opensea Matic",
+  "description": "Contracts for a minimum viable NFT compatible with Opensea Polygon",
   "main": "truffle.js",
   "scripts": {
     "test": "scripts/test.sh",

@@ -11,13 +11,23 @@ module.exports = {
     matic: {
       provider: () => new HDWalletProvider(
         process.env.MNEMONIC,
-        `https://polygon-mainnet.infura.io/v3/0a9d453d25754d52973ee1a69ea37937`
+        `https://polygon-rpc.com/`
       ),
       network_id: 137,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: false
     },
+  aurora: {
+    provider: () => new HDWalletProvider(
+      process.env.MNEMONIC,
+      `https://testnet.aurora.dev`,
+      0,
+      3,
+      true,
+    ),
+    network_id: 0x4e454153,
+    gas: 10000000,
   },
 
   // Set default mocha options here, use special reporters etc.

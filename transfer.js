@@ -7,7 +7,7 @@ const Web3 = require('web3');
 
 const web3 = new Web3(new HDWalletProvider(
         process.env.MNEMONIC,
-        `https://rpc-mainnet.matic.network`
+        `https://polygon-rpc.com/`
       ));
 
 const Nft = truffleContract(nftArtifacts);
